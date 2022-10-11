@@ -5,9 +5,13 @@ require_once 'HighWay.php';
 final class MotorWay extends HighWay
 {
 
-    protected array $currentVehicles;
-    protected int $nbLane = 4;
-    protected int $maxSpeed = 130;
+    public function __construct()
+    {
+        $this->currentVehicles = [];
+        $this->nbLane = 4;
+        $this->maxSpeed = 90;
+        
+    }
 
     public function addVehicle(Vehicle $vehicle)
     {
